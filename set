@@ -1,0 +1,7 @@
+ int spanCount = 3;
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), spanCount));
+        mRecyclerView.addItemDecoration(new GridDividerItemDecoration(getContext(), spanCount));
+
+        mWidgetItemAdapter = new WidgetItemAdapter(sortPageInfo(getPageContents()));
+        mWidgetItemAdapter.setOnItemClickListener(this);
+        mRecyclerView.setAdapter(mWidgetItemAdapter);
